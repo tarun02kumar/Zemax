@@ -11,7 +11,7 @@
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# In a double pass light passes through a optical system twice so tolerancing for
+# In a double pass light passes through an optical system twice so tolerancing for
 # for forward and return paths can not be independent.
 # We have used a pre-optimized two-lens monochromat from the lens catalog
 # But this example can be modified for any other optical system which uses a double pass
@@ -54,11 +54,16 @@ SETSYSTEMPROPERTY 23, "SCHOTT OHARA"
 
 IF (UNIT() == 0) THEN PRINT "Lens units are mm"
 
-PRINT " Primary wavelength: ", WAVL(PWAV()), " micrometers."
-
+# print integer i.e. no data after decimal places
+FORMAT 1.0
 PRINT "Number of wavelengths: ", NWAV()
+# 3 digits before and after decimals
+FORMAT 3.3
+PRINT " Primary wavelength: ", WAVL(PWAV()), " micrometres."
 
+FORMAT 1.0
 PRINT "Number of Fields: ", NFLD()
+FORMAT 3.3
 PRINT "Y-Fields value: ", FLDY(1)
 
 #2. Setting Lens Data Editor
