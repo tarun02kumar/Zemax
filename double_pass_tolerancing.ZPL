@@ -44,7 +44,7 @@ SETSYSTEMPROPERTY 102, 1, 0
 SETSYSTEMPROPERTY 103, 1, 0
 # Setting up the number of wavelengths to 1
 SETSYSTEMPROPERTY 201, 1
-# setting the value of wavelength # 1, 2, 3 in um
+# Setting the value of wavelength in um
 SETSYSTEMPROPERTY 202, 1, 0.546
 # Setting up the primary wavelength index # to 1
 SETSYSTEMPROPERTY 200, 1
